@@ -20,3 +20,13 @@ $ cd ..
 $ rm -rf old-repository.git
 # Remove our temporary local repository
 ```
+
+If you want to mirror a repository in another location, including getting updates from the original, you can clone a mirror and periodically push the changes.
+```
+$ git clone --mirror https://github.com/exampleuser/repository-to-mirror.git
+# Make a bare mirrored clone of the repository
+
+$ cd repository-to-mirror.git
+$ git remote set-url --push origin https://github.com/exampleuser/mirrored
+# Set the push location to your mirror
+```
