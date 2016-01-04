@@ -1,6 +1,11 @@
 ####Changing commit timestamp
 
-To change the timestamp on an old commit, For example If you wanted to change the dates of 
+To change the timestamp on an old commit, use `git filter-branch` with an `env filter` that sets GIT_AUTHOR_DATE and GIT_COMMITTER_DATE for the specific hash of the commit you're looking to fix.
+
+This will invalidate that and all future hashes.
+
+
+For example If you wanted to change the dates of 
 commit `119f9ecf58069b265ab22f1f97d2b648faf932e0`, you could do so with something like this:
 
 
